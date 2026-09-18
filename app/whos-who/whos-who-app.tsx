@@ -10,6 +10,7 @@ import {
   evpsAndVps,
   corporateAndHseq,
   groupHr,
+  groupFinance,
   hsEnvirotech,
   businessUnitHeads,
   type Contact,
@@ -158,6 +159,13 @@ export default function WhosWhoApp() {
               <div className={styles.divisionLabel}>Group HR</div>
               <div className={cx(styles.grid, styles.cols2)}>
                 {groupHr.map((c) => (
+                  <ContactCard key={c.name} c={c} />
+                ))}
+              </div>
+
+              <div className={styles.divisionLabel}>Group Finance</div>
+              <div className={cx(styles.grid, styles.cols2)}>
+                {groupFinance.map((c) => (
                   <ContactCard key={c.name} c={c} />
                 ))}
               </div>

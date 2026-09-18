@@ -111,6 +111,30 @@ export const groupHr: Contact[] = [
     emails: ["adibah@hrsb.com.my"],
     phone: "+6 010-667 4968",
   },
+  {
+    name: "Noorul Asikin Binti Abdul Jalil @ Abas",
+    role: "Compensation & Benefits Manager",
+    unit: "Group HR",
+    emails: ["noorulasikin@hrsb.com.my"],
+    phone: "+6 016-476 7621",
+  },
+];
+
+export const groupFinance: Contact[] = [
+  {
+    name: "Noor Baidah Binti Abdul Azis",
+    role: "Accounts Manager",
+    unit: "Group Finance",
+    emails: ["noorbaidah@hrsb.com.my"],
+    phone: "+6 013-288 0806",
+  },
+  {
+    name: "Farhanah Al Husna Binti Harolizam",
+    role: "Finance & Accounts",
+    unit: "Group Finance",
+    emails: ["farhanah@hrsb.com.my"],
+    phone: "+6 014-618 8758",
+  },
 ];
 
 export const hsEnvirotech: Contact[] = [
@@ -133,6 +157,7 @@ export const businessUnitHeads: Contact[] = [
     name: "Dr. Hj. Rozailan Bin Roslan",
     role: "Head of Business Unit",
     unit: "ARMS Scaffolding (M) Sdn Bhd",
+    emails: ["rozailan@hrsb.com.my"],
     phone: "+6 019-364 1111",
   },
   {
@@ -160,12 +185,14 @@ export const businessUnitHeads: Contact[] = [
     name: "Mohammad Ali Mohd Hassim",
     role: "Head of Business Unit",
     unit: "HRSB Fabricator Sdn Bhd",
+    emails: ["mohammadali@hrsb.com.my"],
     phone: "+6 013-626 1098",
   },
   {
     name: "Ts. Bahrul Hisham Bin Bahauddin",
     role: "Head of Business Unit",
     unit: "HRSB Engineering & Construction Sdn Bhd",
+    emails: ["bahrul.hisham@hrsb.com.my"],
   },
   {
     name: "Ir. Ts. Sayyid Syafiq Bin Syed Mohamed",
@@ -176,18 +203,21 @@ export const businessUnitHeads: Contact[] = [
     name: "Azizah Binti Osman",
     role: "Head of Business Unit",
     unit: "Neo Bio Infinite Sdn Bhd",
+    emails: ["azizah.osman@neo-bi.com.my"],
     phone: "+6 019-589 5357",
   },
   {
     name: "Ts. Mohd Hafizullah Bin Abdullah",
     role: "Head of Business Unit",
     unit: "HRSB Infracomm Sdn Bhd",
+    emails: ["hafizullah@hrsb.com.my"],
     phone: "+6 019-655 3766",
   },
   {
     name: "Azrul Khairiri Bin Ahmad Zainudin",
     role: "Head of Business Unit",
     unit: "HRSB Infrabina Sdn Bhd",
+    emails: ["azrulkhairiri@hrsb.com.my"],
     phone: "+6 012-202 3511",
   },
   {
@@ -201,6 +231,7 @@ export const businessUnitHeads: Contact[] = [
     name: "Mohd Qayyum Bin Mohamed Nashir",
     role: "Head of Business Unit",
     unit: "Southern Region Facilities (AIT)",
+    emails: ["qayyum@hrsb.com.my"],
     phone: "+6 019-333 2854",
   },
 ];
