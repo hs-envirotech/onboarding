@@ -27,7 +27,6 @@ import {
   trackRecord,
   factsheet,
   licences,
-  keyPersonnel,
   preExit,
   postExit,
   orgCeo,
@@ -316,7 +315,7 @@ export default function EnvirotechApp() {
                 </div>
                 <h1 className={styles.pageTitle}>Corporate information</h1>
                 <p className={styles.pageLead} style={{ marginBottom: 26 }}>
-                  Legal entity details, key personnel, and current licences &amp; registrations.
+                  Legal entity details and current licences &amp; registrations.
                 </p>
 
                 <div className={styles.card}>
@@ -324,18 +323,6 @@ export default function EnvirotechApp() {
                     <div key={row.label} className={styles.factRow}>
                       <div className={styles.factLabel}>{row.label}</div>
                       <div className={styles.factValue}>{row.value}</div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className={styles.eyebrow} style={{ margin: "28px 0 14px" }}>
-                  Key personnel
-                </div>
-                <div className={styles.card}>
-                  {keyPersonnel.map((p) => (
-                    <div key={p.name} className={styles.factRow}>
-                      <div className={styles.factLabel}>{p.role}</div>
-                      <div className={styles.factValue}>{p.name}</div>
                     </div>
                   ))}
                 </div>
@@ -377,7 +364,10 @@ export default function EnvirotechApp() {
                     <div className={styles.eyebrow} style={{ margin: "14px 0 8px" }}>Shareholders</div>
                     <div className={styles.branchList}>
                       {preExit.shareholders.map((s) => (
-                        <span key={s.holder} className={styles.branchItem}>{s.holder}</span>
+                        <span key={s.holder} className={styles.branchItem}>
+                          {s.holder}
+                          {s.stake && <strong style={{ color: "var(--accent)" }}> — {s.stake}</strong>}
+                        </span>
                       ))}
                     </div>
                   </div>

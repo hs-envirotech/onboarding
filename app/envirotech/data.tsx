@@ -136,20 +136,6 @@ export const licences: Licence[] = [
   { name: "PETRONAS licence to supply", scope: "20 approved product & service categories", validity: "to 29 Dec 2027" },
 ];
 
-export type Person = {
-  name: string;
-  role: string;
-  bio?: string;
-};
-
-export const keyPersonnel: Person[] = [
-  { name: "Dato' Haji Jamil Bin Hashim, MBA", role: "Chairman" },
-  { name: "Ir. Ts. Sayyid Syafiq Bin Syed Mohamed", role: "Chief Executive Officer" },
-  { name: "Zulkurnain Bin Hassan", role: "Project Director" },
-  { name: "Dato' Haji Mohd Faizal Bin Mohd Hassim", role: "Project Advisor" },
-  { name: "Muhammad Rusydi Bin Jamil", role: "HOD, Corporate Services" },
-];
-
 export type OwnershipRow = { holder: string; stake?: string };
 
 export type CapTable = {
@@ -169,8 +155,8 @@ export const preExit: CapTable = {
     "M Kerbanandhan Pillay",
   ],
   shareholders: [
-    { holder: "HRSB Holdings Sdn. Bhd." },
-    { holder: "Sigma Water Engineering (M) Sdn. Bhd." },
+    { holder: "HRSB Holdings Sdn. Bhd.", stake: "70%" },
+    { holder: "Sigma Water Engineering (M) Sdn. Bhd.", stake: "30%" },
   ],
 };
 
@@ -201,7 +187,6 @@ export const orgTeams: OrgTeam[] = [
     lead: { role: "Business Development Manager", name: "Nasrieq Naser" },
     reports: [
       { role: "Service Manager", name: "Zulkurnain Hassan" },
-      { role: "Executive, Data Analyst", name: "Maryam Safyah Binti Mohamed Sharif" },
       { role: "Engineer, Proposal", name: "Vacancy" },
     ],
   },
@@ -213,6 +198,7 @@ export const orgTeams: OrgTeam[] = [
       { role: "Executive, Corporate Services", name: "Anne Mahadi" },
       { role: "Executive, Accounts", name: "Vacancy" },
       { role: "Executive, Procurement", name: "Vacancy" },
+      { role: "Executive, Data Analyst", name: "Maryam Safyah Binti Mohamed Sharif" },
     ],
   },
   {
