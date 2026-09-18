@@ -414,8 +414,7 @@ export const remitSections: RemitSection[] = [
         <div className={styles.callout}>
           <span className={styles.calloutTitle}>To confirm with Rusydi</span>
           Whether the SPAN Permit C / CE20 application has progressed by the time you start — get
-          the current status handed over. Also confirm the hs-envirotech.com domain renewal (was
-          due 16 August 2026) went through.
+          the current status handed over. CIDB C1 renewal is urgent — it expires January 2027.
         </div>
       </>
     ),
@@ -536,7 +535,6 @@ export const checklistGroups: ChecklistGroup[] = [
       "Monthly claims cycle: staff submit in HRSBOne by the 25th; you verify, get HOD approvals, compile the workbook and upload (report + attachments) by the 1st to the CLAIM 2026 folder",
       "Monthly Admin Report: locate the template at ADMIN TEAM \\ Documents \\ General \\ Admin Reporting \\ 2026",
       "Licensing: list of current CIDB registrations, renewal dates, and status of the CE20 / SPAN Permit C application",
-      "Domain renewal (hs-envirotech.com) — confirm it was renewed on schedule",
       "Board support: get briefed on the board member list and meeting cadence — shadow the next meeting if timing allows",
     ],
     notes: [
@@ -556,6 +554,20 @@ export const checklistGroups: ChecklistGroup[] = [
       "Set a recurring reminder for pantry restocking",
       "Confirm the brand palette & fonts (swatches on the Start tab)",
       "Get the Brand Guidelines file, master templates/letterheads, and a look at current merchandise & marketing materials from Rusydi",
+      "Company t-shirt & uniform — get sizing and design sorted",
+      "Renew CIDB C1 — expiring January 2027 (urgent)",
+    ],
+  },
+  {
+    id: "D",
+    day: "Week 1",
+    title: "Office, hiring & event prep",
+    items: [
+      "Coordinate and arrange interviews for vacancies — liaise with Group HR and the relevant HODs",
+      "Print business cards for key personnel",
+      "Order basic office items — company envelopes, stamps and similar",
+      "Office interior and furnishing",
+      "Prep for the Majlis Doa Selamat & opening ceremony — 30 September",
     ],
   },
   {
