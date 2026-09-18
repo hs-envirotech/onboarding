@@ -455,6 +455,9 @@
 .cols3 {
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
+.alignStart {
+  align-items: start;
+}
 
 /* ---- pill chips ---- */
 .chips {
@@ -746,6 +749,21 @@
   font-weight: 700;
   font-size: 16px;
   flex: none;
+}
+.avatarPhoto {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex: none;
+  display: block;
+}
+.avatarPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 .personName {
   font-size: 16.5px;

@@ -33,6 +33,7 @@ import {
   operationFacilities,
   orgAffairs,
   orgVentures,
+  orgCeoOffice,
   orgTopLevel,
   type Person,
 } from "./data";
@@ -61,7 +62,18 @@ function PersonCard({ person }: { person: Person }) {
   return (
     <div className={cx(styles.card, styles.person)}>
       <div className={styles.personTop}>
-        <span className={styles.avatar}>{initials}</span>
+        {person.photo ? (
+          <span className={styles.avatarPhoto}>
+            <Image
+              src={person.photo.src}
+              alt={person.name}
+              width={person.photo.w}
+              height={person.photo.h}
+            />
+          </span>
+        ) : (
+          <span className={styles.avatar}>{initials}</span>
+        )}
         <div>
           <div className={styles.personName}>{person.name}</div>
           <div className={styles.personRole}>{person.role}</div>
@@ -259,7 +271,8 @@ export default function CompanyApp() {
                 <h1 className={styles.pageTitle}>Company structure</h1>
                 <p className={styles.pageLead} style={{ marginBottom: 26 }}>
                   Governance flows from the Board down through the Group President/CEO into two
-                  operating divisions — Energy and Non-Energy — each with its own subsidiaries.
+                  operating divisions — Energy and Emerging Market — each with its own
+                  subsidiaries.
                 </p>
 
                 <div className={styles.tree}>
@@ -274,7 +287,17 @@ export default function CompanyApp() {
                     ))}
                   </div>
                   <div className={cx(styles.card, styles.treeRoot)}>Group President / CEO</div>
-                  <div className={cx(styles.grid, styles.cols2)}>
+                  <div className={cx(styles.grid, styles.cols3, styles.alignStart)}>
+                    <div className={cx(styles.card, styles.treeBranch)}>
+                      <div style={{ fontSize: 14.5, fontWeight: 700, color: "var(--text-strong)", marginBottom: 10 }}>
+                        {orgCeoOffice.title}
+                      </div>
+                      <div className={styles.branchList}>
+                        {orgCeoOffice.items.map((t) => (
+                          <span key={t} className={styles.branchItem}>{t}</span>
+                        ))}
+                      </div>
+                    </div>
                     <div className={cx(styles.card, styles.treeBranch)}>
                       <div style={{ fontSize: 14.5, fontWeight: 700, color: "var(--text-strong)", marginBottom: 10 }}>
                         {orgAffairs.title}
@@ -385,7 +408,7 @@ export default function CompanyApp() {
                   ))}
                 </div>
 
-                <div className={styles.divisionLabel}>Non-energy division</div>
+                <div className={styles.divisionLabel}>Emerging Market division</div>
                 <div className={cx(styles.grid, styles.cols3)}>
                   {nonEnergySubsidiaries.map((s) => (
                     <div key={s.name} className={cx(styles.card, styles.subCard)}>

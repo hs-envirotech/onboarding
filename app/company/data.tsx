@@ -96,7 +96,7 @@ export const journey: Era[] = [
     tag: "Commitment",
     items: [
       "Moved into a new HQ office",
-      "Corporate transformation — split into Energy and Non-Energy divisions",
+      "Corporate transformation — split into Energy and Emerging Market divisions",
       "New cloud ERP (Acumatica)",
       "T4MS contract extended to 2027, inclusive of additional OPU",
       "Neo Bio-Infinite (NBI) Sdn Bhd incorporated",
@@ -135,6 +135,7 @@ export type Person = {
   name: string;
   role: string;
   bio: string;
+  photo?: { src: string; w: number; h: number };
 };
 
 export const boardOfDirectors: Person[] = [
@@ -142,34 +143,39 @@ export const boardOfDirectors: Person[] = [
     name: "Dato' Hj. Jamil Bin Hashim",
     role: "Group Executive Chairman",
     bio: "Appointed Group Executive Chairman in November 2012. 37 years of experience in production, engineering and organisation management in the oil and gas sector, formerly with Asean Bintulu Fertiliser, Petronas Penapisan (Melaka), Petronas Chemicals Methanol and Petronas Penapisan (Terengganu), plus a stint in corporate HR talent sourcing and downstream operations at KLCC. BSc (Hons) Chemical Engineering, Oklahoma State University; Senior Management Development programme, INSEAD.",
+    photo: { src: "/portraits/jamil-hashim.png", w: 180, h: 180 },
   },
   {
     name: "Dato' Hj. Mohd Faizal bin Hj Mohd Hassim",
     role: "Group President",
     bio: "Founded HSE Resources Sdn Bhd in November 2001. Bachelor (Hons) Business Administration, majoring in Finance. 26 years of experience in occupational safety and health, construction, scaffolding and plant maintenance, formerly with the Chiyoda Corp/MMC/CMSB joint venture, Taisei Sumiples Consortium and Sri Takada Industries. President of the Malaysian Scaffolding Association, founded in 2018.",
+    photo: { src: "/portraits/faizal-hassim.png", w: 232, h: 232 },
   },
   {
     name: "Dato' Hj. Mohd Sabri Bin Zahari",
     role: "Executive Vice President, Group Corporate Ventures & Strategic Growth",
     bio: "Joined HRSB in October 2011 as COO for HSE Resources. 27+ years in the oil, gas and petrochemical industry, beginning at PETRONAS in 1991 as a Planning Engineer at Petronas Gas Berhad, Kerteh. Since 2002 has led more than 30 plant shutdowns and turnarounds for oil refinery, petrochemical and gas separation plants as Turnaround/Project Manager and Director/Advisor. BSc Mechanical Engineering, Case Western Reserve University, USA (1990).",
+    photo: { src: "/portraits/sabri-zahari.png", w: 145, h: 150 },
   },
   {
     name: "Noranis Bin Bohari",
     role: "Executive Vice President, Group Corporate Affairs & Services",
     bio: "Appointed in April 2010. Bachelor's (Hons) Accountancy, Universiti Utara Malaysia; Chartered Accountant with the Malaysian Institute of Accountants, Certified Financial Planner, and member of the Malaysian Institute of Taxation. 27 years of experience in financial management, auditing and taxation, formerly with the Johor Corporation Group, Johor Islamic Corporation Group and Sabaka Group.",
+    photo: { src: "/portraits/noranis-bohari.png", w: 238, h: 238 },
   },
 ];
 
 export const keyPersons: Person[] = [
   {
-    name: "Emi Suhardi Bin Mohd Fadzil",
+    name: "Ridzuan Bin Ismail",
     role: "Vice President, Energy Division",
-    bio: "36 years of experience in operational excellence — production management, process safety, project design and commissioning, and risk management. BSc Chemical Engineering (USA, 1988); Professional Certificate in Applied Sustainable Practice, GPM Global (USA). Member of the Society of Petroleum Engineers, American Institute of Chemical Engineers and Malaysian Petroleum Club; Adjunct Lecturer at Universiti Teknologi PETRONAS.",
+    bio: "More than 15 years of experience in turnaround and mechanical maintenance works, serving PETRONAS plants across Peninsular Malaysia. Strong background in project management, planning, and operational and business excellence.",
   },
   {
     name: "Hadfi Bin Abdul Halim",
     role: "Vice President, Emerging Market Division",
     bio: "32 years of experience across services, infrastructure, technology, education and F&B industries in Malaysia and Indonesia, leading operations, driving innovation and market expansion. Bachelor's (Hons) Business Administration, Universiti Utara Malaysia (1993).",
+    photo: { src: "/portraits/hadfi-halim.png", w: 248, h: 248 },
   },
 ];
 
@@ -247,7 +253,7 @@ export const nonEnergySubsidiaries: Subsidiary[] = [
   {
     name: "Neo Bio-Infinite Sdn Bhd",
     ownership: "55%",
-    desc: "Non-Energy division subsidiary.",
+    desc: "Emerging Market division subsidiary.",
     logo: { src: "/logos/neo-bio-infinite.jpg", w: 213, h: 87 },
   },
 ];
@@ -335,11 +341,16 @@ export const orgVentures: OrgBranch = {
   title: "EVP · Group Corporate Ventures & Strategic Growth",
   items: [
     "VP Energy — VP Office, Head of Projects/PMO",
-    "VP Non-Energy",
+    "VP Emerging Market",
     "Business Development, Commercial & Contract",
     "Proposal Committee",
     "Transformation & Intervention Office",
   ],
+};
+
+export const orgCeoOffice: OrgBranch = {
+  title: "Group President/CEO Office",
+  items: ["Senior Manager"],
 };
 
 export const orgTopLevel: string[] = [
