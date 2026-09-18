@@ -17,6 +17,8 @@ import {
   Info,
   CheckCircle2,
   Building2,
+  Droplet,
+  Users,
 } from "lucide-react";
 import styles from "./onboarding.module.css";
 import {
@@ -217,6 +219,14 @@ export default function OnboardingApp() {
           <Link href="/company" className={styles.tab}>
             <Building2 size={16} />
             <span className={styles.tabLabel}>HRSB</span>
+          </Link>
+          <Link href="/envirotech" className={styles.tab}>
+            <Droplet size={16} />
+            <span className={styles.tabLabel}>Envirotech</span>
+          </Link>
+          <Link href="/whos-who" className={styles.tab}>
+            <Users size={16} />
+            <span className={styles.tabLabel}>Who&apos;s who</span>
           </Link>
           <button
             className={cx(styles.tab, tab === "remit" && styles.tabOn)}

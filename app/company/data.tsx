@@ -276,7 +276,7 @@ export type Location = {
 export const locations: Location[] = [
   {
     name: "Masjid Tanah, Melaka",
-    subs: ["HRSB Holdings (Headquarters)", "Hydrospeed", "Blitz Training"],
+    subs: ["HRSB Holdings (Headquarters)", "Hydrospeed", "Blitz Training", "ARMS Scaffolding"],
     addr: "Lot 2044, Mukim Sungai Baru Ulu, Solok Duku, 78300 Masjid Tanah, Melaka.",
     meta: "Tel +6 06 385 2803 / 2804 · melaka@hrsb.com.my",
     map: { x: 34, y: 73 },

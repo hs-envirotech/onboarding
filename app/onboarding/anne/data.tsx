@@ -8,8 +8,6 @@ import {
   Share2,
   Briefcase,
   Server,
-  Cloud,
-  GitBranch,
 } from "lucide-react";
 import styles from "./onboarding.module.css";
 
@@ -43,7 +41,8 @@ export const quickLinks: QuickLink[] = [
   {
     icon: Globe,
     title: "Company website",
-    description: "Yours 100% — content, uptime, and every future domain renewal.",
+    description:
+      "Live — Maryam deployed it directly via Shinjiru. Liaise with her on any site update; you own the announcements & media-release content that feeds it.",
     domain: "hs-envirotech.com",
     href: "https://hs-envirotech.com",
   },
@@ -64,38 +63,26 @@ export const quickLinks: QuickLink[] = [
   {
     icon: Share2,
     title: "Facebook page",
-    description: 'Runs under the "Envirotech" brand only. Page login is in Accounts Credentials.',
+    description:
+      'Runs under the "Envirotech" brand only. Page login is in Accounts Credentials. Reports up to Group under the Digital Marketing Transformation initiative — PIC Hamizan Hamdan.',
     domain: "facebook.com/61591527082715",
     href: "https://facebook.com/61591527082715",
   },
   {
     icon: Briefcase,
     title: "LinkedIn page",
-    description: "Company page — content calendar, sourcing, design and posting are all yours.",
+    description:
+      "Content calendar, sourcing, design and posting are yours. Reports up to Group under the Digital Marketing Transformation initiative — Hamizan Hamdan is the PIC there.",
     domain: "linkedin.com/company/hrsb-sigma-envirotech",
     href: "https://linkedin.com/company/hrsb-sigma-envirotech",
   },
   {
     icon: Server,
     title: "Shinjiru",
-    description: "Domain registrar for hs-envirotech.com. Confirm the renewal date in week one.",
+    description:
+      "Domain registrar — and, since Maryam's redeploy, direct website hosting too. Confirm the renewal date in week one; site changes still go through Maryam.",
     domain: "shinjiru.com.my",
     href: "https://shinjiru.com.my",
-  },
-  {
-    icon: Cloud,
-    title: "Cloudflare",
-    description:
-      "Site rebuild runs on Cloudflare Pages — staging on a pages.dev URL until the nameserver switch.",
-    domain: "dash.cloudflare.com",
-    href: "https://dash.cloudflare.com",
-  },
-  {
-    icon: GitBranch,
-    title: "GitHub",
-    description: "Website source code lives here, deployed via Cloudflare Pages.",
-    domain: "github.com",
-    href: "https://github.com",
   },
 ];
 
@@ -105,6 +92,10 @@ export type KeyPath = {
 };
 
 export const keyPaths: KeyPath[] = [
+  {
+    title: "Corporate Services directory — the CS team's own working folder",
+    path: "Envirotech Corporate Services \\ Documents",
+  },
   {
     title: "Accounts Credentials — every login & renewal date",
     path: "Envirotech \\ Documents \\ Accounts Credentials.xlsx",
@@ -164,8 +155,9 @@ export const calendarRows: CalendarRow[] = [
     tag: "Yearly",
     body: (
       <>
-        <strong>hs-envirotech.com</strong>{" "}domain renewal at Shinjiru — the 2026 renewal should
-        be done before you start; confirm it went through.
+        <strong>hs-envirotech.com</strong>{" "}domain &amp; hosting renewal at Shinjiru — Maryam runs
+        the site itself, but this renewal affects everyone; confirm the 2026 renewal went through
+        and flag the next one to her ahead of time.
       </>
     ),
   },
@@ -191,7 +183,8 @@ export const remitChips: string[] = [
   "CSR — clean slate, yours to build",
   "Brand, templates & merchandise",
   "SharePoint structure & naming",
-  "Website, Facebook & LinkedIn",
+  "Announcements & media releases",
+  "Facebook & LinkedIn",
   "Tender portal registrations",
   "Licensing & renewals",
   "Office admin & pantry",
@@ -303,23 +296,29 @@ export const remitSections: RemitSection[] = [
     body: (
       <>
         <p>
-          Full ownership across all three, end to end. Both social channels run under the{" "}
-          <strong>&quot;Envirotech&quot; brand only</strong>{" "}— the older &quot;HRSB Sigma&quot;
-          naming should not appear.
+          Since this document was first written, Maryam has deployed the live site herself,
+          directly via Shinjiru — not the Cloudflare/GitHub pipeline described here previously.{" "}
+          <strong>Website platform changes go through Maryam</strong>{" "}now; your part is the
+          content that feeds it. You keep full ownership of Facebook &amp; LinkedIn day to day.
+          Both social channels run under the <strong>&quot;Envirotech&quot; brand only</strong>{" "}
+          — the older &quot;HRSB Sigma&quot; naming should not appear.
         </p>
         <p>
-          <span className={styles.lbl}>hs-envirotech.com:</span>{" "}yours 100%, including all future domain
-          renewals — a standing item on your renewal calendar from day one. The domain is held at
-          Shinjiru; the rebuild runs on Cloudflare Pages + GitHub, staging on a pages.dev URL
-          until the nameserver switch. All three logins are in Accounts Credentials. Don&apos;t
-          rely on the registrar&apos;s own notice email — set your own reminder well ahead of
-          expiry.
+          <span className={styles.lbl}>hs-envirotech.com:</span>{" "}live and yours to feed, not to
+          rebuild — you own announcements, media releases and any copy/asset updates, and hand
+          them to Maryam to publish. The domain (and now hosting) renewal at Shinjiru is still a
+          standing item on your calendar from day one — the login is in Accounts Credentials.
+          Don&apos;t rely on the registrar&apos;s own notice email — set your own reminder well
+          ahead of expiry, and loop Maryam in.
         </p>
         <p>
           <span className={styles.lbl}>Facebook &amp; LinkedIn:</span>{" "}plan a simple content calendar so
           posting doesn&apos;t become reactive; source material from project/BD teams (new
           projects, milestones, hires); design in the brand palette and fonts; you hold the keys
-          to publish.
+          to publish. Both channels also report up to Group under the{" "}
+          <strong>Digital Marketing Transformation</strong>{" "}initiative — <strong>Hamizan
+          Hamdan</strong>{" "}is the PIC there, so loop him in on what you post and on any
+          Group-level reporting asks.
         </p>
       </>
     ),
@@ -508,6 +507,7 @@ export const checklistGroups: ChecklistGroup[] = [
     title: "Access & orientation",
     items: [
       "Get SharePoint access confirmed (Envirotech folder)",
+      "Locate Envirotech Corporate Services \\ Documents — the CS team's own working folder",
       <>
         Get access to HRSB Holdings \ Documents \ General \{" "}
         <strong>01 MASTER INTEGRATED MANAGEMENT</strong>{" "}— where all policies, procedures and
@@ -515,7 +515,8 @@ export const checklistGroups: ChecklistGroup[] = [
       </>,
       "Locate Envirotech \\ Documents \\ Accounts Credentials.xlsx — all account logins (website, social, tender portals, licensing) going forward",
       "Get login access for the company Facebook & LinkedIn pages",
-      "Get Shinjiru, Cloudflare and GitHub access for the website — yours 100%, including future renewals",
+      "Get introduced to Maryam for website updates — the live site is deployed via Shinjiru, hers to update; get Shinjiru access for the domain/hosting renewal",
+      "Get introduced to Hamizan Hamdan (Group Digital Marketing Transformation PIC) for Facebook/LinkedIn reporting",
       "Get login access for any tender portals currently registered",
       "Collect laptop/equipment and confirm IT setup",
       "Walk through office layout, pantry location and general house rules with Rusydi",
