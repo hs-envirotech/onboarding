@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Building2,
   Network,
@@ -44,15 +45,6 @@ const TAB_KEY = "hrsb.tab";
 
 function cx(...classNames: Array<string | false | undefined>) {
   return classNames.filter(Boolean).join(" ");
-}
-
-function HRSBMark() {
-  return (
-    <svg width="34" height="28" viewBox="0 0 128 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="HRSB mark">
-      <polyline points="10,58 32,24 54,54 76,20 98,50 118,34" fill="none" stroke="#06B074" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="76" cy="20" r="9" fill="#06B074" />
-    </svg>
-  );
 }
 
 const valueIcons = [Target, CompassIcon, Sparkles];
@@ -129,9 +121,14 @@ export default function CompanyApp() {
     <div className={styles.page} data-theme={theme}>
       <header className={styles.topbar}>
         <div className={styles.brand} title="HRSB Holdings">
-          <HRSBMark />
-          <span className={styles.brandWord}>hrsb</span>
-          <span className={styles.crumb}>holdings</span>
+          <Image
+            src="/logos/hrsb-holdings.png"
+            alt="HRSB Holdings"
+            width={200}
+            height={97}
+            className={styles.brandLogo}
+            priority
+          />
         </div>
         <nav className={styles.tabs} role="tablist" aria-label="Sections">
           <button className={cx(styles.tab, tab === "overview" && styles.tabOn)} role="tab" aria-selected={tab === "overview"} onClick={() => goToTab("overview")}>
@@ -376,6 +373,9 @@ export default function CompanyApp() {
                 <div className={cx(styles.grid, styles.cols3)}>
                   {energySubsidiaries.map((s) => (
                     <div key={s.name} className={cx(styles.card, styles.subCard)}>
+                      <span className={styles.subLogo}>
+                        <Image src={s.logo.src} alt={s.name} width={s.logo.w} height={s.logo.h} />
+                      </span>
                       <div className={styles.subTop}>
                         <span className={styles.subName}>{s.name}</span>
                         <span className={styles.subOwn}>{s.ownership}</span>
@@ -389,6 +389,9 @@ export default function CompanyApp() {
                 <div className={cx(styles.grid, styles.cols3)}>
                   {nonEnergySubsidiaries.map((s) => (
                     <div key={s.name} className={cx(styles.card, styles.subCard)}>
+                      <span className={styles.subLogo}>
+                        <Image src={s.logo.src} alt={s.name} width={s.logo.w} height={s.logo.h} />
+                      </span>
                       <div className={styles.subTop}>
                         <span className={styles.subName}>{s.name}</span>
                         <span className={styles.subOwn}>{s.ownership}</span>

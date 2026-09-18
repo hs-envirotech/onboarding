@@ -105,7 +105,10 @@ export const journey: Era[] = [
   {
     years: "2026–2030",
     tag: "Towards excellence",
-    items: ["The next chapter — where we're headed as a group."],
+    items: [
+      "Road to Bursa — working towards a listing on Bursa Malaysia",
+      "The next chapter — where we're headed as a group.",
+    ],
   },
 ];
 
@@ -174,6 +177,7 @@ export type Subsidiary = {
   name: string;
   ownership: string;
   desc: string;
+  logo: { src: string; w: number; h: number };
 };
 
 export const energySubsidiaries: Subsidiary[] = [
@@ -181,36 +185,43 @@ export const energySubsidiaries: Subsidiary[] = [
     name: "HRSB Power Control Sdn Bhd",
     ownership: "100%",
     desc: "Mechanical & electrical systems (electricity, fire fighting, HVAC, cold water, sanitary), architectural/civil & structure, environmental services and security systems.",
+    logo: { src: "/logos/hrsb-power-control.jpg", w: 185, h: 86 },
   },
   {
     name: "Hydrospeed Sdn Bhd",
     ownership: "100%",
     desc: "Industrial cleaning — high pressure water jetting, chemical & ultrasonic cleaning — plus piping & valve servicing, catalyst change-outs, robotic cleaning and tank maintenance.",
+    logo: { src: "/logos/hydrospeed.jpg", w: 116, h: 113 },
   },
   {
     name: "HRSB Engineering & Construction Sdn Bhd",
     ownership: "100%",
     desc: "EPCC / EPCM / EPCIC and construction, plant maintenance & turnaround, fabrication, blasting & painting, manpower supply, and mechanical rotating & valve services.",
+    logo: { src: "/logos/hrsb-engineering-construction.jpg", w: 185, h: 87 },
   },
   {
     name: "ARMS Scaffolding Sdn Bhd",
     ownership: "100%",
     desc: "Scaffolding material, manpower and erection services for plant maintenance/turnaround, shutdowns and construction.",
+    logo: { src: "/logos/arms.jpg", w: 222, h: 51 },
   },
   {
     name: "HRSB Plant & Services Sdn Bhd",
     ownership: "80%",
     desc: "Plant maintenance & turnaround projects, EPCC / construction / fabrication works, and manpower supply.",
+    logo: { src: "/logos/hrsb-plant-services.jpg", w: 185, h: 87 },
   },
   {
     name: "Asset Integrity Technology Sdn Bhd",
     ownership: "80%",
     desc: "Advanced and conventional NDT (radiography, penetrant, magnetic particle, ultrasonic, eddy current), NDT tubing, magnetic flux tank scanning, positive material inspection, hardness testing and manpower supply.",
+    logo: { src: "/logos/asset-integrity-technology.jpg", w: 141, h: 89 },
   },
   {
     name: "HRSB Sigma Envirotech Sdn Bhd",
     ownership: "70%",
     desc: "Water and wastewater plant upgrading & expansion, operation and maintenance, skid unit rentals, chemical supply, closed circuit reverse osmosis, membrane bioreactor (MBR) and construction.",
+    logo: { src: "/logos/hrsb-sigma-envirotech.jpg", w: 248, h: 84 },
   },
 ];
 
@@ -219,21 +230,25 @@ export const nonEnergySubsidiaries: Subsidiary[] = [
     name: "Blitz Training & Consultancy Sdn Bhd",
     ownership: "100%",
     desc: "Formerly HRSB Training. Scaffolding competency, site safety supervisor competency, confined space entry (AESP), basic rigging & slinging, high pressure water jet (HPWJ) and soft skills training.",
+    logo: { src: "/logos/blitz.jpg", w: 188, h: 88 },
   },
   {
     name: "HRSB Infracomm Sdn Bhd",
     ownership: "100%",
     desc: "Telecom tower & pole facilities (60m/76m towers, smartpoles, monopoles, rooftop structures), pylon structures, fiberisation contracting and tower buy-back.",
+    logo: { src: "/logos/hrsb-infracomm.jpg", w: 195, h: 116 },
   },
   {
     name: "Databolt Sdn Bhd",
     ownership: "60%",
     desc: "Technology solutions — system development, business integration, digital agency services, IT supply, ICT consultancy and artificial intelligence.",
+    logo: { src: "/logos/databolt.jpg", w: 90, h: 88 },
   },
   {
     name: "Neo Bio-Infinite Sdn Bhd",
     ownership: "55%",
     desc: "Non-Energy division subsidiary.",
+    logo: { src: "/logos/neo-bio-infinite.jpg", w: 213, h: 87 },
   },
 ];
 
