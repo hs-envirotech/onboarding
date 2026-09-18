@@ -9,6 +9,8 @@ import {
   boardLeadership,
   evpsAndVps,
   corporateAndHseq,
+  groupHr,
+  hsEnvirotech,
   businessUnitHeads,
   type Contact,
 } from "./data";
@@ -43,16 +45,16 @@ function ContactCard({ c }: { c: Contact }) {
         </div>
       </div>
       <p className={styles.personBio}>{c.unit}</p>
-      {(c.email || c.phone) && (
+      {((c.emails && c.emails.length > 0) || c.phone) && (
         <div className={styles.personMeta}>
-          {c.email && (
-            <div>
+          {c.emails?.map((email, i) => (
+            <div key={email} style={{ marginTop: i > 0 ? 4 : 0 }}>
               <Mail size={12} style={{ verticalAlign: -2, marginRight: 6 }} />
-              {c.email}
+              {email}
             </div>
-          )}
+          ))}
           {c.phone && (
-            <div style={{ marginTop: c.email ? 4 : 0 }}>
+            <div style={{ marginTop: c.emails?.length ? 4 : 0 }}>
               <Phone size={12} style={{ verticalAlign: -2, marginRight: 6 }} />
               {c.phone}
             </div>
@@ -149,6 +151,20 @@ export default function WhosWhoApp() {
               <div className={styles.divisionLabel}>Corporate office &amp; HSEQ</div>
               <div className={cx(styles.grid, styles.cols2)}>
                 {corporateAndHseq.map((c) => (
+                  <ContactCard key={c.name} c={c} />
+                ))}
+              </div>
+
+              <div className={styles.divisionLabel}>Group HR</div>
+              <div className={cx(styles.grid, styles.cols2)}>
+                {groupHr.map((c) => (
+                  <ContactCard key={c.name} c={c} />
+                ))}
+              </div>
+
+              <div className={styles.divisionLabel}>HS Envirotech</div>
+              <div className={cx(styles.grid, styles.cols2)}>
+                {hsEnvirotech.map((c) => (
                   <ContactCard key={c.name} c={c} />
                 ))}
               </div>

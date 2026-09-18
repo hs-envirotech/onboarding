@@ -2,7 +2,7 @@ export type Contact = {
   name: string;
   role: string;
   unit: string;
-  email?: string;
+  emails?: string[];
   phone?: string;
 };
 
@@ -11,46 +11,51 @@ export const boardLeadership: Contact[] = [
     name: "Dato' Haji Jamil Bin Hashim",
     role: "Executive Chairman",
     unit: "HRSB Holdings",
-    email: "jamil@hrsb.com.my",
+    emails: ["jamil@hrsb.com.my", "jamil@hs-envirotech.com"],
     phone: "+6 012-631 2421",
   },
   {
     name: "Dato' Haji Mohd Faizal Bin Mohd Hassim",
     role: "Group President",
     unit: "HRSB Holdings",
+    emails: ["faizal.hassim@hrsb.com.my"],
     phone: "+6 010-900 0070",
   },
   {
     name: "Dato' Haji Mohd Sabri Bin Zahari",
     role: "EVP, Strategic Growth & Planning",
-    unit: "Board of Directors",
+    unit: "HRSB Holdings",
     phone: "+6 013-938 2008",
+  },
+  {
+    name: "Noranis Bin Bohari",
+    role: "EVP, Corporate Affairs",
+    unit: "HRSB Holdings",
+    emails: ["noranis@hrsb.com.my"],
+    phone: "+6 019-711 6768",
   },
 ];
 
 export const evpsAndVps: Contact[] = [
   {
-    name: "Noranis Bin Bohari",
-    role: "EVP, Corporate Affairs",
-    unit: "Corporate Services Office",
-    phone: "+6 019-711 6768",
-  },
-  {
     name: "Ridzuan Bin Ismail",
     role: "Vice President, Energy Division",
     unit: "VP Office — Energy Division",
+    emails: ["ridzuan@hrsb.com.my"],
     phone: "+6 019-988 9796",
   },
   {
     name: "Hadfi Bin Abdul Halim",
     role: "Vice President, Emerging Market Division",
     unit: "VP Office — Emerging Market Division",
+    emails: ["hadfi.halim@hrsb.com.my"],
     phone: "+6 010-712 5448",
   },
   {
     name: "Zulfadhli Bin Jamil",
     role: "Assistant Vice President",
     unit: "Strategic Planning Office",
+    emails: ["zulfadhli@hrsb.com.my"],
     phone: "+6 017-639 7478",
   },
 ];
@@ -60,19 +65,66 @@ export const corporateAndHseq: Contact[] = [
     name: "Ramli Bin Khalid",
     role: "Corporate Head of HSEQ",
     unit: "HSEQ",
+    emails: ["ramli.khalid@hrsb.com.my"],
     phone: "+6 011-2097 8928",
   },
   {
-    name: "Zulkurnain Bin Hassan",
-    role: "Project Director",
-    unit: "HRSB Sigma Envirotech / Group",
+    name: "Farizan Binti Idris",
+    role: "Corporate HSEQ",
+    unit: "HSEQ",
+    emails: ["farizan.idris@hrsb.com.my"],
+    phone: "+6 013-508 0128",
   },
+  {
+    name: "Muhammad Hazree Bin Abdul Maroof",
+    role: "Head of Strategic Planning & Business Development",
+    unit: "Corporate Office",
+    emails: ["hazree.maroof@hrsb.com.my"],
+  },
+  {
+    name: "Ts. Mohd Zulfadhli Bin Idrus",
+    role: "Senior Manager",
+    unit: "President Office",
+    emails: ["zulfadhli.idrus@hrsb.com.my"],
+  },
+  {
+    name: "Suhaimi Bin Shahmin",
+    role: "Procurement Manager",
+    unit: "Group Procurement",
+    emails: ["suhaimi@hrsb.my"],
+    phone: "+6 019-374 8040",
+  },
+];
+
+export const groupHr: Contact[] = [
+  {
+    name: "Ainuddin Nazlee Bin Jamil",
+    role: "Senior Talent Manager",
+    unit: "Group HR",
+    emails: ["nazlee.jamal@hrsb.com.my"],
+    phone: "+6 019-263 3013",
+  },
+  {
+    name: "Adibah Binti Taib",
+    role: "Group HR",
+    unit: "Group HR",
+    emails: ["adibah@hrsb.com.my"],
+    phone: "+6 010-667 4968",
+  },
+];
+
+export const hsEnvirotech: Contact[] = [
   {
     name: "Muhammad Rusydi Bin Jamil",
     role: "HOD, Corporate Services",
-    unit: "HRSB Sigma Envirotech Sdn Bhd",
-    email: "rusydi@hs-envirotech.com",
+    unit: "HS Envirotech",
+    emails: ["rusydi@hs-envirotech.com"],
     phone: "+6 013-691 9337",
+  },
+  {
+    name: "Zulkurnain Bin Hassan",
+    role: "Services Manager",
+    unit: "HS Envirotech",
   },
 ];
 
@@ -87,21 +139,21 @@ export const businessUnitHeads: Contact[] = [
     name: "Muhammad Ammar Bin Abd Haris",
     role: "Head of Business Unit",
     unit: "Hydrospeed Sdn Bhd",
-    email: "ammarharis@hrsb.com.my",
+    emails: ["ammarharis@hrsb.com.my"],
     phone: "+6 017-230 3670",
   },
   {
     name: "Fairous Bin Rosman",
     role: "Head of Business Unit",
     unit: "HRSB Plant Services Sdn Bhd",
-    email: "fairousrosman@hrsb.com.my",
+    emails: ["fairousrosman@hrsb.com.my"],
     phone: "+6 012-601 0175",
   },
   {
     name: "Mohd Najib Bin Mohd Yusof",
     role: "Head of Business Unit",
     unit: "HRSB Power Control Sdn Bhd",
-    email: "najib.yusof@hrsb.com.my",
+    emails: ["najib.yusof@hrsb.com.my"],
     phone: "+6 012-300 6069",
   },
   {
@@ -142,7 +194,7 @@ export const businessUnitHeads: Contact[] = [
     name: "Zulfaizal Bin Noordin",
     role: "Head of Business Unit",
     unit: "Blitz Training & Consultancy",
-    email: "faizal.noordin@hrsb.com",
+    emails: ["faizal.noordin@hrsb.com"],
     phone: "+6 011-1117 0967",
   },
   {
