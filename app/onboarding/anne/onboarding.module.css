@@ -277,27 +277,19 @@
 .tabOn svg {
   color: var(--accent);
 }
+.page a.tab {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+.page a.tab:hover {
+  color: var(--text-body);
+  text-decoration: none;
+}
 .tabLabel {
   display: inline;
 }
 .spacer {
   flex: 1;
-}
-.navLink {
-  display: inline-flex;
-  align-items: center;
-  height: 38px;
-  padding: 0 14px;
-  border-radius: var(--r-md);
-  font-size: 13.5px;
-  font-weight: 500;
-  color: var(--text-muted);
-  transition: background var(--dur-fast), color var(--dur-fast);
-}
-.navLink:hover {
-  background: var(--surface-hover);
-  color: var(--text-body);
-  text-decoration: none;
 }
 .iconbtn {
   width: 38px;

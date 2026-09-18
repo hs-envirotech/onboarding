@@ -214,6 +214,10 @@ export default function OnboardingApp() {
             <Compass size={16} />
             <span className={styles.tabLabel}>Start here</span>
           </button>
+          <Link href="/company" className={styles.tab}>
+            <Building2 size={16} />
+            <span className={styles.tabLabel}>HRSB</span>
+          </Link>
           <button
             className={cx(styles.tab, tab === "remit" && styles.tabOn)}
             role="tab"
@@ -234,10 +238,6 @@ export default function OnboardingApp() {
           </button>
         </nav>
         <div className={styles.spacer} />
-        <Link href="/company" className={styles.navLink}>
-          <Building2 size={14} style={{ marginRight: 6, verticalAlign: -2 }} />
-          HRSB
-        </Link>
         <button
           className={styles.iconbtn}
           aria-label="Toggle theme"
