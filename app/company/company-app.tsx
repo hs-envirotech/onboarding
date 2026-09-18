@@ -133,14 +133,16 @@ export default function CompanyApp() {
     <div className={styles.page} data-theme={theme}>
       <header className={styles.topbar}>
         <div className={styles.brand} title="HRSB Holdings">
-          <Image
-            src="/logos/hrsb-holdings.png"
-            alt="HRSB Holdings"
-            width={200}
-            height={97}
-            className={styles.brandLogo}
-            priority
-          />
+          <span className={styles.brandBadge}>
+            <Image
+              src="/logos/hrsb-holdings.png"
+              alt="HRSB Holdings"
+              width={200}
+              height={97}
+              className={styles.brandLogo}
+              priority
+            />
+          </span>
         </div>
         <nav className={styles.tabs} role="tablist" aria-label="Sections">
           <button className={cx(styles.tab, tab === "overview" && styles.tabOn)} role="tab" aria-selected={tab === "overview"} onClick={() => goToTab("overview")}>
@@ -441,6 +443,32 @@ export default function CompanyApp() {
                   facilities spread across six states in Peninsular Malaysia.
                 </p>
 
+                <div className={cx(styles.card, styles.mapCard)}>
+                  <div className={styles.mapWrap}>
+                    <svg
+                      className={styles.mapSvg}
+                      viewBox="0 0 100 100"
+                      preserveAspectRatio="none"
+                      aria-hidden="true"
+                    >
+                      <polygon points="32,2 18,10 15,22 20,38 24,52 28,64 33,74 38,84 48,97 58,91 65,76 70,58 78,42 72,26 60,13 45,4" />
+                    </svg>
+                    {[...mainOffices, ...satelliteOffices].map((loc) => (
+                      <div
+                        key={loc.name}
+                        className={styles.pin}
+                        style={{ left: `${loc.map.x}%`, top: `${loc.map.y}%` }}
+                      >
+                        <span className={styles.pinDot} />
+                        <span className={styles.pinLabel}>
+                          {loc.name}
+                          {loc.sub && <span>{loc.sub}</span>}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
                 <div className={cx(styles.grid, styles.cols2)}>
                   {mainOffices.map((loc) => (
                     <div key={loc.name} className={cx(styles.card, styles.locCard)}>
@@ -453,6 +481,7 @@ export default function CompanyApp() {
                           <div className={styles.locTag}>{loc.tag}</div>
                         </div>
                       </div>
+                      {loc.sub && <span className={styles.locSub}>{loc.sub}</span>}
                       <p className={styles.locAddr}>{loc.addr}</p>
                       {loc.meta && <div className={styles.locMeta}>{loc.meta}</div>}
                     </div>
@@ -474,6 +503,7 @@ export default function CompanyApp() {
                           <div className={styles.locTag}>{loc.tag}</div>
                         </div>
                       </div>
+                      {loc.sub && <span className={styles.locSub}>{loc.sub}</span>}
                       <p className={styles.locAddr}>{loc.addr}</p>
                       {loc.meta && <div className={styles.locMeta}>{loc.meta}</div>}
                     </div>
