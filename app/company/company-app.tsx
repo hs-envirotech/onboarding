@@ -28,9 +28,7 @@ import {
   energySubsidiaries,
   nonEnergySubsidiaries,
   workforce,
-  mainOffices,
-  satelliteOffices,
-  operationFacilities,
+  locations,
   orgAffairs,
   orgVentures,
   orgCeoOffice,
@@ -439,8 +437,8 @@ export default function CompanyApp() {
                 </div>
                 <h1 className={styles.pageTitle}>Locations</h1>
                 <p className={styles.pageLead} style={{ marginBottom: 20 }}>
-                  Headquartered in Melaka, with a branch office, satellite offices and operation
-                  facilities spread across six states in Peninsular Malaysia.
+                  Six sites across Peninsular Malaysia, including two in Melaka — the Masjid
+                  Tanah headquarters and the Bertam fabrication facility.
                 </p>
 
                 <div className={cx(styles.card, styles.mapCard)}>
@@ -453,70 +451,37 @@ export default function CompanyApp() {
                     >
                       <polygon points="32,2 18,10 15,22 20,38 24,52 28,64 33,74 38,84 48,97 58,91 65,76 70,58 78,42 72,26 60,13 45,4" />
                     </svg>
-                    {[...mainOffices, ...satelliteOffices].map((loc) => (
+                    {locations.map((loc) => (
                       <div
                         key={loc.name}
                         className={styles.pin}
                         style={{ left: `${loc.map.x}%`, top: `${loc.map.y}%` }}
                       >
                         <span className={styles.pinDot} />
-                        <span className={styles.pinLabel}>
-                          {loc.name}
-                          {loc.sub && <span>{loc.sub}</span>}
-                        </span>
+                        <span className={styles.pinLabel}>{loc.name}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className={cx(styles.grid, styles.cols2)}>
-                  {mainOffices.map((loc) => (
-                    <div key={loc.name} className={cx(styles.card, styles.locCard)}>
-                      <div className={styles.locTop}>
-                        <span className={styles.locIco}>
-                          <MapPin size={17} />
-                        </span>
-                        <div>
-                          <div className={styles.locName}>{loc.name}</div>
-                          <div className={styles.locTag}>{loc.tag}</div>
-                        </div>
-                      </div>
-                      {loc.sub && <span className={styles.locSub}>{loc.sub}</span>}
-                      <p className={styles.locAddr}>{loc.addr}</p>
-                      {loc.meta && <div className={styles.locMeta}>{loc.meta}</div>}
-                    </div>
-                  ))}
-                </div>
-
-                <div className={styles.eyebrow} style={{ margin: "26px 0 14px" }}>
-                  Satellite offices
-                </div>
                 <div className={cx(styles.grid, styles.cols3)}>
-                  {satelliteOffices.map((loc) => (
+                  {locations.map((loc) => (
                     <div key={loc.name} className={cx(styles.card, styles.locCard)}>
                       <div className={styles.locTop}>
                         <span className={styles.locIco}>
                           <MapPin size={17} />
                         </span>
-                        <div>
-                          <div className={styles.locName}>{loc.name}</div>
-                          <div className={styles.locTag}>{loc.tag}</div>
-                        </div>
+                        <div className={styles.locName}>{loc.name}</div>
                       </div>
-                      {loc.sub && <span className={styles.locSub}>{loc.sub}</span>}
-                      <p className={styles.locAddr}>{loc.addr}</p>
+                      <div className={styles.locSubs}>
+                        {loc.subs.map((s) => (
+                          <span key={s} className={styles.locSub}>
+                            {s}
+                          </span>
+                        ))}
+                      </div>
+                      {loc.addr && <p className={styles.locAddr}>{loc.addr}</p>}
                       {loc.meta && <div className={styles.locMeta}>{loc.meta}</div>}
-                    </div>
-                  ))}
-                </div>
-
-                <div className={styles.eyebrow} style={{ margin: "26px 0 14px" }}>
-                  Operation &amp; fabrication facilities
-                </div>
-                <div className={styles.card} style={{ padding: "6px 0" }}>
-                  {operationFacilities.map((f) => (
-                    <div key={f} className={styles.factRow}>
-                      <div className={styles.factValue}>{f}</div>
                     </div>
                   ))}
                 </div>

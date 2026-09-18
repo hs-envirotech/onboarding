@@ -924,13 +924,6 @@
   font-weight: 700;
   color: var(--text-strong);
 }
-.locTag {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: var(--ls-caps);
-  text-transform: uppercase;
-  color: var(--text-faint);
-}
 .locAddr {
   font-size: 13.5px;
   color: var(--text-body);
@@ -940,6 +933,11 @@
   font-family: var(--font-mono);
   font-size: 12px;
   color: var(--text-muted);
+}
+.locSubs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 .locSub {
   display: inline-flex;
@@ -951,7 +949,6 @@
   background: var(--accent-soft);
   padding: 2px 8px;
   border-radius: var(--r-pill);
-  align-self: flex-start;
 }
 
 /* ---- peninsula map ---- */

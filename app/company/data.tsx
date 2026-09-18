@@ -266,63 +266,59 @@ export const workforce = {
 };
 
 export type Location = {
-  tag: string;
   name: string;
-  addr: string;
+  subs: string[];
+  addr?: string;
   meta?: string;
-  sub?: string;
   map: { x: number; y: number };
 };
 
-export const mainOffices: Location[] = [
+export const locations: Location[] = [
   {
-    tag: "Headquarters",
-    name: "Melaka",
+    name: "Masjid Tanah, Melaka",
+    subs: ["HRSB Holdings (Headquarters)", "Hydrospeed", "Blitz Training"],
     addr: "Lot 2044, Mukim Sungai Baru Ulu, Solok Duku, 78300 Masjid Tanah, Melaka.",
     meta: "Tel +6 06 385 2803 / 2804 · melaka@hrsb.com.my",
     map: { x: 34, y: 73 },
   },
   {
-    tag: "Branch office",
-    name: "Terengganu",
-    addr: "Lot PT 17675, Taman Industri Paka, 23100 Dungun, Terengganu.",
-    meta: "Tel +6 09 827 6401 · terengganu@hrsb.com.my",
-    sub: "HRSB E&C",
-    map: { x: 74, y: 40 },
+    name: "Bertam, Melaka",
+    subs: [
+      "HRSB Fabricator",
+      "HRSB Power Control",
+      "HRSB Infracomm",
+      "HRSB Infrabina",
+      "Databolt",
+    ],
+    map: { x: 39, y: 69 },
   },
-];
-
-export const satelliteOffices: Location[] = [
   {
-    tag: "Satellite office",
-    name: "Kedah",
+    name: "Gurun, Kedah",
+    subs: ["HRSB Plant Services"],
     addr: "Lot 5810, Jalan Sungai Petani, Kampung Guar Nenas, 08300 Gurun, Kedah.",
     meta: "Tel +604 461 5523",
-    sub: "HRSB PS",
     map: { x: 28, y: 15 },
   },
   {
-    tag: "Satellite office",
-    name: "Johor — Southern Region Facilities",
+    name: "Bangsar, Kuala Lumpur",
+    subs: ["HS Envirotech"],
+    addr: "Level 5, Syed Kechik Foundation Building, Jalan Kapas, Bangsar, Kuala Lumpur.",
+    meta: "Tel +6 03 7492 5021",
+    map: { x: 32, y: 55 },
+  },
+  {
+    name: "Paka, Terengganu",
+    subs: ["HRSB Engineering & Construction"],
+    addr: "Lot PT 17675, Taman Industri Paka, 23100 Dungun, Terengganu.",
+    meta: "Tel +6 09 827 6401 · terengganu@hrsb.com.my",
+    map: { x: 74, y: 40 },
+  },
+  {
+    name: "Pengerang, Johor",
+    subs: ["Southern Region Facilities (AIT)"],
     addr: "32-02, Jalan Kelicap 1, Taman Bukit Pelali, 81600 Pengerang, Johor. Yard: Lot 5949 & 5950, Mukim Pengerang, Daerah Kota Tinggi, 81600 Johor Darul Takzim.",
     map: { x: 62, y: 93 },
   },
-  {
-    tag: "Satellite office",
-    name: "Kuala Lumpur",
-    addr: "Level 5, Syed Kechik Foundation Building, Jalan Kapas, Bangsar, Kuala Lumpur.",
-    meta: "Tel +6 03 7492 5021",
-    sub: "HS Envirotech",
-    map: { x: 32, y: 55 },
-  },
-];
-
-export const operationFacilities: string[] = [
-  "Southern Region Facilities — Pengerang, Johor",
-  "Bertam, Melaka",
-  "Gurun, Kedah",
-  "Paka, Terengganu",
-  "Solok Duku, Melaka (HQ)",
 ];
 
 export type OrgBranch = {
