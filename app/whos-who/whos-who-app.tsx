@@ -127,8 +127,6 @@ export default function WhosWhoApp() {
               <p className={styles.heroLead}>
                 Names, titles and contacts worth knowing across the Group — Board &amp;
                 leadership, EVPs &amp; VPs, corporate office heads, and every Business Unit head.
-                Sourced from the Majlis Doa Selamat guest list and RSVP tracker (Sept 2026); update
-                it here as roles change.
               </p>
             </div>
           </div>
