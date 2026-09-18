@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import {
   Compass,
   LayoutGrid,
@@ -15,6 +16,7 @@ import {
   ChevronDown,
   Info,
   CheckCircle2,
+  Building2,
 } from "lucide-react";
 import styles from "./onboarding.module.css";
 import {
@@ -232,6 +234,10 @@ export default function OnboardingApp() {
           </button>
         </nav>
         <div className={styles.spacer} />
+        <Link href="/company" className={styles.navLink}>
+          <Building2 size={14} style={{ marginRight: 6, verticalAlign: -2 }} />
+          HRSB
+        </Link>
         <button
           className={styles.iconbtn}
           aria-label="Toggle theme"
