@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers — static-assets-only deployment.
+  // Serves the Next.js static export (out/) as a plain static site.
+  // Build step (`npm run build`) generates out/; `wrangler deploy` uploads it.
+  "name": "onboarding",
+  "compatibility_date": "2025-01-01",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
