@@ -456,7 +456,16 @@ export default function CompanyApp() {
                         key={loc.name}
                         className={styles.pin}
                         style={{ left: `${loc.map.x}%`, top: `${loc.map.y}%` }}
+                        tabIndex={0}
                       >
+                        <div className={styles.pinTooltip}>
+                          <div className={styles.pinTooltipTitle}>{loc.name}</div>
+                          {loc.subs.map((s) => (
+                            <div key={s} className={styles.pinTooltipSub}>
+                              {s}
+                            </div>
+                          ))}
+                        </div>
                         <span className={styles.pinDot} />
                         <span className={styles.pinLabel}>{loc.name}</span>
                       </div>

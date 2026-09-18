@@ -981,6 +981,12 @@
   flex-direction: column;
   align-items: center;
   gap: 5px;
+  z-index: 1;
+  cursor: pointer;
+}
+.pin:hover,
+.pin:focus-within {
+  z-index: 30;
 }
 .pinDot {
   width: 10px;
@@ -988,6 +994,11 @@
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 0 4px var(--accent-soft);
+  transition: box-shadow var(--dur-fast);
+}
+.pin:hover .pinDot,
+.pin:focus-within .pinDot {
+  box-shadow: 0 0 0 6px var(--accent-soft);
 }
 .pinLabel {
   font-family: var(--font-mono);
@@ -1007,6 +1018,41 @@
   font-weight: 400;
   color: var(--text-muted);
   font-size: 9px;
+}
+.pinTooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translate(-50%, 4px);
+  min-width: 150px;
+  background: var(--surface-raised);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-lg);
+  padding: 10px 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur-fast), transform var(--dur-fast);
+}
+.pin:hover .pinTooltip,
+.pin:focus-within .pinTooltip {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.pinTooltipTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12.5px;
+  color: var(--text-strong);
+  margin-bottom: 6px;
+  white-space: nowrap;
+}
+.pinTooltipSub {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--text-muted);
+  padding: 2px 0;
+  white-space: nowrap;
 }
 
 .footer {
