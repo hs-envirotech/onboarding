@@ -94,6 +94,18 @@ export const corporateAndHseq: Contact[] = [
     emails: ["suhaimi@hrsb.my"],
     phone: "+6 019-374 8040",
   },
+  {
+    name: "Muhammad Rusydi Bin Jamil",
+    role: "HOD, Corporate Services",
+    unit: "HRSB Sigma Envirotech Sdn Bhd",
+    emails: ["rusydi@hs-envirotech.com"],
+    phone: "+6 013-691 9337",
+  },
+  {
+    name: "Zulkurnain Bin Hassan",
+    role: "Services Manager",
+    unit: "HRSB Sigma Envirotech Sdn Bhd",
+  },
 ];
 
 export const groupHr: Contact[] = [
@@ -137,22 +149,7 @@ export const groupFinance: Contact[] = [
   },
 ];
 
-export const hsEnvirotech: Contact[] = [
-  {
-    name: "Muhammad Rusydi Bin Jamil",
-    role: "HOD, Corporate Services",
-    unit: "HS Envirotech",
-    emails: ["rusydi@hs-envirotech.com"],
-    phone: "+6 013-691 9337",
-  },
-  {
-    name: "Zulkurnain Bin Hassan",
-    role: "Services Manager",
-    unit: "HS Envirotech",
-  },
-];
-
-export const businessUnitHeads: Contact[] = [
+export const businessUnitHeadsEnergy: Contact[] = [
   {
     name: "Dr. Hj. Rozailan Bin Roslan",
     role: "Head of Business Unit",
@@ -198,7 +195,18 @@ export const businessUnitHeads: Contact[] = [
     name: "Ir. Ts. Sayyid Syafiq Bin Syed Mohamed",
     role: "CEO / Head of Business Unit",
     unit: "HRSB Sigma Envirotech Sdn Bhd",
+    emails: ["sayyid@hs-envirotech.com"],
   },
+  {
+    name: "Mohd Qayyum Bin Mohamed Nashir",
+    role: "Head of Business Unit",
+    unit: "Southern Region Facilities (AIT)",
+    emails: ["qayyum@hrsb.com.my"],
+    phone: "+6 019-333 2854",
+  },
+];
+
+export const businessUnitHeadsEmergingMarket: Contact[] = [
   {
     name: "Azizah Binti Osman",
     role: "Head of Business Unit",
@@ -226,12 +234,5 @@ export const businessUnitHeads: Contact[] = [
     unit: "Blitz Training & Consultancy",
     emails: ["faizal.noordin@hrsb.com"],
     phone: "+6 011-1117 0967",
-  },
-  {
-    name: "Mohd Qayyum Bin Mohamed Nashir",
-    role: "Head of Business Unit",
-    unit: "Southern Region Facilities (AIT)",
-    emails: ["qayyum@hrsb.com.my"],
-    phone: "+6 019-333 2854",
   },
 ];

@@ -11,8 +11,8 @@ import {
   corporateAndHseq,
   groupHr,
   groupFinance,
-  hsEnvirotech,
-  businessUnitHeads,
+  businessUnitHeadsEnergy,
+  businessUnitHeadsEmergingMarket,
   type Contact,
 } from "./data";
 
@@ -168,16 +168,16 @@ export default function WhosWhoApp() {
                 ))}
               </div>
 
-              <div className={styles.divisionLabel}>HS Envirotech</div>
+              <div className={styles.divisionLabel}>Heads of business units — Energy Division</div>
               <div className={cx(styles.grid, styles.cols2)}>
-                {hsEnvirotech.map((c) => (
+                {businessUnitHeadsEnergy.map((c) => (
                   <ContactCard key={c.name} c={c} />
                 ))}
               </div>
 
-              <div className={styles.divisionLabel}>Heads of business units</div>
+              <div className={styles.divisionLabel}>Heads of business units — Emerging Market Division</div>
               <div className={cx(styles.grid, styles.cols2)}>
-                {businessUnitHeads.map((c) => (
+                {businessUnitHeadsEmergingMarket.map((c) => (
                   <ContactCard key={c.name} c={c} />
                 ))}
               </div>
