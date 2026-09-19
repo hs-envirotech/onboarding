@@ -198,7 +198,7 @@ export const orgTeams: OrgTeam[] = [
       { role: "Executive, Corporate Services", name: "Anne Mahadi" },
       { role: "Executive, Accounts", name: "Vacancy" },
       { role: "Executive, Procurement", name: "Vacancy" },
-      { role: "Executive, Data Analyst", name: "Maryam Safyah Binti Mohamed Sharif" },
+      { role: "Executive, Data Analyst", name: "Maryam Safyah" },
     ],
   },
   {

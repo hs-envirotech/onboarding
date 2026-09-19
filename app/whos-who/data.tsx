@@ -94,18 +94,6 @@ export const corporateAndHseq: Contact[] = [
     emails: ["suhaimi@hrsb.my"],
     phone: "+6 019-374 8040",
   },
-  {
-    name: "Muhammad Rusydi Bin Jamil",
-    role: "HOD, Corporate Services",
-    unit: "HRSB Sigma Envirotech Sdn Bhd",
-    emails: ["rusydi@hs-envirotech.com"],
-    phone: "+6 013-691 9337",
-  },
-  {
-    name: "Zulkurnain Bin Hassan",
-    role: "Services Manager",
-    unit: "HRSB Sigma Envirotech Sdn Bhd",
-  },
 ];
 
 export const groupHr: Contact[] = [
