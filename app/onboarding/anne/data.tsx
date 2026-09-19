@@ -8,6 +8,7 @@ import {
   Share2,
   Briefcase,
   Server,
+  CalendarClock,
 } from "lucide-react";
 import styles from "./onboarding.module.css";
 
@@ -83,6 +84,13 @@ export const quickLinks: QuickLink[] = [
       "Domain registrar — and, since Maryam's redeploy, direct website hosting too. Confirm the renewal date in week one; site changes still go through Maryam.",
     domain: "shinjiru.com.my",
     href: "https://shinjiru.com.my",
+  },
+  {
+    icon: CalendarClock,
+    title: "Meeting Room Booking",
+    description: "Book the Bangsar office meeting rooms — check availability before scheduling anything on-site.",
+    domain: "hs-envirotech-rooms.netlify.app",
+    href: "https://hs-envirotech-rooms.netlify.app/",
   },
 ];
 
