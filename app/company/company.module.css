@@ -741,6 +741,29 @@
   padding: 7px 10px;
   border-radius: var(--r-sm);
   background: var(--surface-inset);
+  border-left: 2px solid transparent;
+}
+.branchItemVacancy {
+  background: rgba(233, 163, 36, 0.1);
+  border-left-color: var(--status-warn);
+}
+.branchItemKyouth {
+  background: rgba(91, 87, 232, 0.12);
+  border-left-color: var(--iris-500);
+}
+.branchItemTag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  margin-left: 6px;
+}
+.branchItemVacancy .branchItemTag {
+  color: var(--status-warn);
+}
+.branchItemKyouth .branchItemTag {
+  color: var(--iris-300);
 }
 
 /* ---- board bios ---- */

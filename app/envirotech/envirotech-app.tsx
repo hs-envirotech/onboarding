@@ -418,6 +418,15 @@ export default function EnvirotechApp() {
                   functional teams. &quot;Vacancy&quot; marks a budgeted, currently open role.
                 </p>
 
+                <div className={styles.chips} style={{ marginBottom: 18 }}>
+                  <span className={styles.chipItem}>
+                    <span className={styles.chipDot} style={{ background: "var(--status-warn)" }} /> Vacancy
+                  </span>
+                  <span className={styles.chipItem}>
+                    <span className={styles.chipDot} style={{ background: "var(--iris-500)" }} /> K-Youth trainee
+                  </span>
+                </div>
+
                 <div className={styles.tree}>
                   <div className={cx(styles.card, styles.treeRoot)}>
                     {orgCeo.role} — {orgCeo.name}
@@ -427,12 +436,27 @@ export default function EnvirotechApp() {
                       <div key={team.title} className={cx(styles.card, styles.treeBranch)}>
                         <div className={styles.branchTitle}>{team.title}</div>
                         <div className={styles.branchList}>
-                          <span className={styles.branchItem}>
+                          <span
+                            className={cx(
+                              styles.branchItem,
+                              team.lead.name === "Vacancy" && styles.branchItemVacancy,
+                              team.lead.kyouth && styles.branchItemKyouth
+                            )}
+                          >
                             <strong>{team.lead.role}</strong> — {team.lead.name}
+                            {team.lead.kyouth && <span className={styles.branchItemTag}>K-Youth</span>}
                           </span>
                           {team.reports.map((r) => (
-                            <span key={r.role} className={styles.branchItem}>
+                            <span
+                              key={r.role}
+                              className={cx(
+                                styles.branchItem,
+                                r.name === "Vacancy" && styles.branchItemVacancy,
+                                r.kyouth && styles.branchItemKyouth
+                              )}
+                            >
                               {r.role} — {r.name}
+                              {r.kyouth && <span className={styles.branchItemTag}>K-Youth</span>}
                             </span>
                           ))}
                         </div>
@@ -442,7 +466,7 @@ export default function EnvirotechApp() {
                   <div className={cx(styles.card, styles.treeBranch)}>
                     <div className={styles.branchTitle}>Trainee intake</div>
                     <div className={styles.branchList}>
-                      <span className={styles.branchItem}>{orgTrainee}</span>
+                      <span className={cx(styles.branchItem, styles.branchItemKyouth)}>{orgTrainee}</span>
                     </div>
                   </div>
                 </div>

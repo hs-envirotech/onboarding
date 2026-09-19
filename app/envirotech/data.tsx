@@ -173,7 +173,7 @@ export const postExit: CapTable = {
   ],
 };
 
-export type OrgNode = { role: string; name: string };
+export type OrgNode = { role: string; name: string; kyouth?: boolean };
 export type OrgTeam = { title: string; lead: OrgNode; reports: OrgNode[] };
 
 export const orgCeo: OrgNode = {
@@ -198,7 +198,7 @@ export const orgTeams: OrgTeam[] = [
       { role: "Executive, Corporate Services", name: "Anne Mahadi" },
       { role: "Executive, Accounts", name: "Vacancy" },
       { role: "Executive, Procurement", name: "Vacancy" },
-      { role: "Executive, Data Analyst", name: "Maryam Safyah" },
+      { role: "Executive, Data Analyst", name: "Maryam Safyah", kyouth: true },
     ],
   },
   {
@@ -209,7 +209,7 @@ export const orgTeams: OrgTeam[] = [
   {
     title: "Projects",
     lead: { role: "Project Manager", name: "Vacancy" },
-    reports: [{ role: "Engineer, Project", name: "M. Iqbal" }],
+    reports: [{ role: "Engineer, Project", name: "M. Iqbal", kyouth: true }],
   },
 ];
 
