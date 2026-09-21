@@ -422,7 +422,8 @@ export const remitSections: RemitSection[] = [
         <div className={styles.callout}>
           <span className={styles.calloutTitle}>To confirm with Rusydi</span>
           Whether the SPAN Permit C / CE20 application has progressed by the time you start — get
-          the current status handed over. CIDB C1 renewal is urgent — it expires January 2027.
+          the current status handed over. CIDB C1 renewals are urgent — one expires December 2026,
+          the other January 2027.
         </div>
       </>
     ),
@@ -563,7 +564,7 @@ export const checklistGroups: ChecklistGroup[] = [
       "Confirm the brand palette & fonts (swatches on the Start tab)",
       "Get the Brand Guidelines file, master templates/letterheads, and a look at current merchandise & marketing materials from Rusydi",
       "Company t-shirt & uniform — get sizing and design sorted",
-      "Renew CIDB C1 — expiring January 2027 (urgent)",
+      "Renew CIDB C1 licences — expiring December 2026 and January 2027 (urgent)",
     ],
   },
   {
